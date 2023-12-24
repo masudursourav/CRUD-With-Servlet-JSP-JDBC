@@ -84,7 +84,7 @@ public class UserDAO {
         List<User> users = new ArrayList<>();
         try{
             Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(selectUserById);
+            PreparedStatement preparedStatement = connection.prepareStatement(selectAllUsers);
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
                 int id = resultSet.getInt("id");
