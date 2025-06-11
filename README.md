@@ -74,16 +74,16 @@ graph TD
     B -->|/update| G[Update User]
     B -->|/delete| H[Delete User]
 
-    C --> I[UserDAO.selectAllUsers()]
-    D --> J[Forward to user-form.jsp]
-    E --> K[UserDAO.insertUser()]
-    F --> L[UserDAO.selectUser() + Forward to user-form.jsp]
-    G --> M[UserDAO.updateUser()]
-    H --> N[UserDAO.deleteUser()]
+    C --> I[UserDAO selectAllUsers]
+    D --> J[Forward to user-form JSP]
+    E --> K[UserDAO insertUser]
+    F --> L[UserDAO selectUser and Forward to user-form JSP]
+    G --> M[UserDAO updateUser]
+    H --> N[UserDAO deleteUser]
 
-    I --> O[user-list.jsp]
+    I --> O[user-list JSP]
     J --> P[Render Form]
-    K --> Q[Redirect to /list]
+    K --> Q[Redirect to list]
     L --> P
     M --> Q
     N --> Q
